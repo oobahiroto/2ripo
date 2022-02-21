@@ -18,7 +18,6 @@
                 </div>
             @endforeach
             <a href='/posts/create'>create</a>
-            <a href='/a'>edit</a>
         </div>
     </body>
 </html>
