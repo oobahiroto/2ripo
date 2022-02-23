@@ -17,8 +17,15 @@
                 <p class='body'>{{ $post->body }}</p>
                 </div>
             @endforeach
-            <a href='/posts/create'>create</a>
-            <a href='/a'>edit</a>
+            [<a href='/posts/create'>create</a>]
+            <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post" style="display:inline">
+               @csrf
+               @method('DELETE')
+              <button type="submit">delete</button> 
+            </form>
+        </div>
+        <div class='paginate'>
+            {{ $posts->links() }}
         </div>
     </body>
 </html>
